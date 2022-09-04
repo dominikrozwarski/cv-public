@@ -412,7 +412,7 @@ h1.company-name {
   margin-bottom: 1rem;
 }
 
-.skills__html, .skills__css, .skills__scss, .skills__javaScript, .skills__react {
+.skills__html, .skills__css, .skills__scss, .skills__javaScript, .skills__react, .skills__blockchain, .skills__web3 {
   padding: 2.4rem;
   text-transform: uppercase;
   text-align: center;

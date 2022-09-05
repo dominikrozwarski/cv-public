@@ -412,7 +412,7 @@ h1.company-name {
   margin-bottom: 1rem;
 }
 
-.skills__html, .skills__css, .skills__scss, .skills__javaScript, .skills__react, .skills__blockchain, .skills__web3 {
+.skills__html, .skills__css, .skills__scss, .skills__javaScript, .skills__react, .skills__c {
   padding: 2.4rem;
   text-transform: uppercase;
   text-align: center;
@@ -684,6 +684,9 @@ h1.company-name {
 }
 
 @media (min-width: 992px) {
+  .header__img {
+    background-image: url("../img/header-big.jpg");
+  }
   .section-title {
     font-size: 4.8rem;
   }

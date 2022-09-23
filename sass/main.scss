@@ -9,6 +9,20 @@
 	padding: 0;
 }
 
+.typed-cursor{
+	display: none;
+}
+
+.inline{
+	text-transform: uppercase;
+	display: inline;
+}
+
+.nav-items-animation{
+	animation: navItemsAnimation 1s both;
+	
+}
+
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
@@ -75,7 +89,7 @@ h1.company-name {
 		padding: 2em;
 
 		p {
-			font-weight: 300;
+			font-weight: 500;
 		}
 	}
 
@@ -130,12 +144,14 @@ h1.company-name {
 	&-inner,
 	&-inner::before,
 	&-inner::after {
-		background-color: $white;
+		background-color: $darker;
 		z-index: 500;
 	}
 }
 
 .nav {
+	
+
 	&-mobile {
 		position: absolute;
 		top: 0;
@@ -148,13 +164,20 @@ h1.company-name {
 		flex-direction: column;
 		background-color: $white;
 		transform: translateX(-102%);
-		transition: transform 0.3s;
+		transition: opacity 0.5s ,transform 0.5s;
 		z-index: 10;
+
+
+		
 
 		&--active {
 			transform: translateX(0);
+
 		}
 	}
+
+
+
 
 	&-desktop {
 		display: none;

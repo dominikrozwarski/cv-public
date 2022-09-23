@@ -38,3 +38,12 @@
 		transform: rotate(-360deg);
 	}
 }
+
+@keyframes navItemsAnimation {
+	from{
+		transform: translate(-100%);
+	}
+	to{
+		transform: translate(0%);
+	}
+}

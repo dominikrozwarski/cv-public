@@ -47,8 +47,8 @@ const handleNavItemsAnimations =()=>{
 
 //typing
 let typed = new Typed(".auto-type", {
-	strings:[" a frontend developer", "a designer", "in need for work :)", "jobless..."],
-	typeSpeed:50,
+	strings:[" a frontend developer", "a designer", "your new team member "],
+	typeSpeed:100,
 	backSpeed:50,
 	loop:true
 })

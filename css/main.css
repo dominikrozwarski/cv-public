@@ -247,7 +247,7 @@ h1.company-name {
 .header__bg-icon-one, .header__bg-icon-two {
   position: absolute;
   opacity: 0.05;
-  z-index: -5;
+  z-index: -1;
 }
 
 .header__bg-icon-one {
@@ -287,6 +287,14 @@ h1.company-name {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   background-color: #b6bdbc;
   z-index: 500;
+}
+
+.auto-type {
+  background: #5A7885;
+  background: -webkit-gradient(linear, left top, right top, from(#5A7885), to(#9b7379));
+  background: linear-gradient(to right, #5A7885 0%, #9b7379 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-mobile {
@@ -510,6 +518,24 @@ h1.company-name {
   top: -10px;
   width: 100vw;
   right: 0;
+}
+
+.monitorProject, .phoneProject {
+  position: absolute;
+  scale: 7;
+  top: 70%;
+  right: 40%;
+  -webkit-animation: rotate-left 75s infinite;
+          animation: rotate-left 75s infinite;
+  opacity: 0.05;
+}
+
+.phoneProject {
+  top: 20%;
+  right: 80%;
+  -webkit-animation: rotate-right 35s infinite;
+          animation: rotate-right 35s infinite;
+  z-index: 1;
 }
 
 .projects {

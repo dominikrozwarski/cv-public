@@ -122,12 +122,14 @@ h1.company-name {
 		display: none;
 	}
 
+
+
 	&__bg-icon-one,
 	&__bg-icon-two {
 		position: absolute;
 		opacity: 0.05;
-		z-index: -5;
-	}
+		z-index: -1;
+		}
 
 	&__bg-icon-one {
 		bottom: 2em;
@@ -167,6 +169,14 @@ h1.company-name {
 		background-color: $darker;
 		z-index: 500;
 	}
+}
+
+
+.auto-type{
+	background: #5A7885;
+	background: linear-gradient(to right, #5A7885 0%, #9b7379 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .nav {
@@ -372,6 +382,22 @@ h1.company-name {
 	top: -10px;
 	width: 100vw;
 	right: 0;
+}
+
+.monitorProject, .phoneProject{
+	position: absolute;
+	scale: 7;
+	top: 70%;
+	right: 40%;
+	animation: rotate-left 75s infinite ;
+	opacity: 0.05;
+}
+
+.phoneProject{
+	top: 20%;
+	right: 80%;
+	animation: rotate-right 35s infinite;
+	z-index: 1;
 }
 
 //projects

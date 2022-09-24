@@ -28,6 +28,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+.connector{
+	height: 100px;
+	
+}
+
 body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.6rem;
@@ -70,6 +75,8 @@ h1.company-name {
 		font-weight: 900;
 	}
 }
+
+
 
 // header
 .header {
@@ -132,6 +139,19 @@ h1.company-name {
 	&__bg-icon-two {
 		display: none;
 	}
+}
+
+.topmWave{
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+}
+
+.headerWave{
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
 }
 
 .hamburger {
@@ -202,6 +222,8 @@ h1.company-name {
 
 // main
 //profile
+
+
 #aboutMe {
 	background-color: $darker;
 	padding: 3.2rem;
@@ -337,8 +359,24 @@ h1.company-name {
 	}
 }
 
+.contactWave{
+	position: absolute;
+	top: -10px;
+	right: 0;
+	z-index: -2;
+	
+}
+
+.midWave{
+	position: absolute;
+	top: -10px;
+	width: 100vw;
+	right: 0;
+}
+
 //projects
 .projects {
+	position: relative;
 	padding: 3.2rem;
 	background-color: $dark;
 }
@@ -349,6 +387,7 @@ h1.company-name {
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	
 
 	&__description {
 		padding: 1rem;
@@ -358,6 +397,7 @@ h1.company-name {
 	&__one,
 	&__two,
 	&__three {
+		z-index: 10;
 		text-align: center;
 		padding: 2.4rem;
 		margin: 2.4rem;
@@ -403,11 +443,18 @@ h1.company-name {
 	}
 }
 
+
+
+
+
 //contact
 
 .contact {
+	position: relative;
 	padding: 6em 2em;
+	z-index: -5;
 	background-color: $darker;
+	z-index: 2;
 
 	&__form {
 		display: grid;
@@ -478,11 +525,7 @@ h1.company-name {
 	}
 }
 
-.footer {
-	padding: 3em 1em;
-	border-top: 1px solid $darker;
-	text-align: center;
-}
+
 
 @import './medium';
 @import './large';

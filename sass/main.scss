@@ -128,7 +128,7 @@ h1.company-name {
 	&__bg-icon-two {
 		position: absolute;
 		opacity: 0.05;
-		z-index: -1;
+		z-index: 1;
 		}
 
 	&__bg-icon-one {
@@ -172,7 +172,9 @@ h1.company-name {
 }
 
 
-.auto-type{
+
+
+.auto-type, .inline{
 	background: #5A7885;
 	background: linear-gradient(to right, #5A7885 0%, #9b7379 100%);
 	-webkit-background-clip: text;
@@ -234,9 +236,10 @@ h1.company-name {
 //profile
 
 
-#aboutMe {
+.cards {
 	background-color: $darker;
 	padding: 3.2rem;
+
 
 	.wrapper {
 		display: flex;
@@ -319,54 +322,77 @@ h1.company-name {
 	}
 }
 
-.skills {
-	width: 50%;
+.skills{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	position: relative;
-	p {
-		font-size: 2.4rem;
-		margin-bottom: 1rem;
+
+	&__main{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
-
-
-	&__html,
-	&__css,
-	&__scss,
-	&__javaScript,
-	&__react,
-	&__c {
-		padding: 2.4rem;
-		text-transform: uppercase;
+	h4{
+		padding-bottom: 0.8em;
+		font-size: 5rem;
+		font-weight: 300;
+		color: $gold;
 		text-align: center;
 	}
-
-
-	&__dots {
-		display: flex;
-
-		.green {
-			background-color: rgb(102, 159, 170);
-		}
-
-		.gray {
-			background-color: gray;
-		}
-
-		.blink {
-			animation: skills 3s infinite;
-		}
-
-		div {
-			border: 1px solid black;
-			width: 15px;
-			height: 15px;
-			margin: 0.5rem;
-			border-radius: 50%;
-		}
+	h4::first-letter{
+		text-decoration: underline;
+		
 	}
+
+	p{
+		padding-bottom: 0.2em;
+	}
+
+	&__all{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 2em;
+		margin: 0.5em;
+
+	}
+
+	&__dots{
+		display: flex;
+		padding-top: 1em;
+	}
+
+	.green, .blink , .gray{
+		width: 15px;
+		height: 15px;
+		border: 1px solid black;
+		margin-right: 0.2em;
+		border-radius: 50%;
+	}
+
+	.green{
+		background-color: rgb(102, 159, 170)
+	}
+
+	.blink{
+
+		animation: skills 3s infinite;
+	}
+
+	.gray{
+		background-color: gray;
+	}
+
+
+	&__img{
+		align-items: center;
+		width: 50px;
+		filter: sepia(0.3);
+	}
+
+
 }
 
 .contactWave{

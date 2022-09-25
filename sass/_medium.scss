@@ -34,6 +34,7 @@
     }
 
 
+
 }
 
 @media(max-width:768px){
@@ -41,6 +42,21 @@
         p{
             font-size: 1rem;
         }
+    }
+
+    
+    .skills{
+        img{
+            width: 30px;
+        }
+    
+        .green, .blink , .gray{
+            width: 15px;
+            height: 15px;
+        }
+
+
+
     }
 }
 
@@ -57,20 +73,18 @@
         margin: 1rem;
        }
     }
-
     .skills{
-        
-        p{
-            font-size: 1.6rem;
+    
+        .green, .blink , .gray{
+            width: 10px;
+            height: 10px;
         }
 
-        &__dots{
-            div{
-                width: 10px;
-                height: 10px;
-                margin: 0.2rem;
-            }
+        &__all{
+            padding: 0.2em;
+            margin: 0.2;
         }
+
     }
 
     .project{

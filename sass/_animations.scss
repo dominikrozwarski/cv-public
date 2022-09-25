@@ -11,11 +11,15 @@
 }
 
 @keyframes skills {
-	from {
+	0% {
 		background-color: gray;
 	}
-	to {
+	50% {
 		background-color: rgb(102, 159, 170)
+	}
+
+	100%{
+		background-color: gray;
 	}
 }
 

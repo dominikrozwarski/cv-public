@@ -1,6 +1,9 @@
 const navMobile = document.querySelector('.nav-mobile');
 const navBtn = document.querySelector('.hamburger');
 const navOne = document.querySelectorAll('.nav__desk');
+const rightSide = document.querySelector('.rightSide')
+const leftSide = document.querySelector('.leftSide')
+const cards = document.querySelector('.cards')
 
 //hidding nav
 const clear = () => {
@@ -38,3 +41,22 @@ let typed = new Typed('.auto-type', {
 	backSpeed: 50,
 	loop: true,
 });
+
+
+//moving profile info
+
+
+const options ={
+	rootMargin: '-250px'
+}
+
+const startMoving = entry =>{
+	if(entry[0].isIntersecting){
+		leftSide.style.opacity = 1
+		rightSide.style.opacity =1
+
+	}
+}
+
+const observer = new IntersectionObserver(startMoving, options)
+observer.observe(cards)

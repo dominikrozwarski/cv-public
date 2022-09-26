@@ -475,6 +475,11 @@ h1.company-name {
           align-items: center;
 }
 
+.skills p {
+  padding-top: 0.4em;
+  color: #fff;
+}
+
 .skills__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -496,10 +501,6 @@ h1.company-name {
 
 .skills h4::first-letter {
   text-decoration: underline;
-}
-
-.skills p {
-  padding-bottom: 0.2em;
 }
 
 .skills__all {

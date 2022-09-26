@@ -328,6 +328,11 @@ h1.company-name {
 	justify-content: center;
 	align-items: center;
 
+	p{
+		padding-top: 0.4em;
+		color: $form;
+	}
+
 	&__main{
 		display: flex;
 		flex-wrap: wrap;
@@ -346,9 +351,7 @@ h1.company-name {
 		
 	}
 
-	p{
-		padding-bottom: 0.2em;
-	}
+
 
 	&__all{
 		display: flex;

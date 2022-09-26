@@ -589,14 +589,14 @@ h1.company-name {
 }
 
 .profile .leftSide {
-  -webkit-transition: all ease-in-out 2s;
-  transition: all ease-in-out 2s;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
   opacity: 0;
 }
 
 .profile .rightSide {
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
   opacity: 0;
 }
 

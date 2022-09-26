@@ -9,18 +9,17 @@
 	padding: 0;
 }
 
-.typed-cursor{
+.typed-cursor {
 	display: none;
 }
 
-.inline{
+.inline {
 	text-transform: uppercase;
 	display: inline;
 }
 
-.nav-items-animation{
+.nav-items-animation {
 	animation: navItemsAnimation 1s both;
-	
 }
 
 html {
@@ -28,9 +27,8 @@ html {
 	scroll-behavior: smooth;
 }
 
-.connector{
+.connector {
 	height: 100px;
-	
 }
 
 body {
@@ -76,8 +74,6 @@ h1.company-name {
 	}
 }
 
-
-
 // header
 .header {
 	display: grid;
@@ -122,14 +118,12 @@ h1.company-name {
 		display: none;
 	}
 
-
-
 	&__bg-icon-one,
 	&__bg-icon-two {
 		position: absolute;
 		opacity: 0.05;
 		z-index: 1;
-		}
+	}
 
 	&__bg-icon-one {
 		bottom: 2em;
@@ -143,13 +137,13 @@ h1.company-name {
 	}
 }
 
-.topmWave{
+.topmWave {
 	width: 100vw;
 	position: absolute;
 	bottom: 0;
 }
 
-.headerWave{
+.headerWave {
 	width: 100vw;
 	position: absolute;
 	bottom: 0;
@@ -171,19 +165,15 @@ h1.company-name {
 	}
 }
 
-
-
-
-.auto-type, .inline{
-	background: #5A7885;
-	background: linear-gradient(to right, #5A7885 0%, #9b7379 100%);
+.auto-type,
+.inline {
+	background: #5a7885;
+	background: linear-gradient(to right, #5a7885 0%, #9b7379 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 .nav {
-	
-
 	&-mobile {
 		position: absolute;
 		top: 0;
@@ -196,20 +186,13 @@ h1.company-name {
 		flex-direction: column;
 		background-color: $white;
 		transform: translateX(-102%);
-		transition: opacity 0.5s ,transform 0.5s;
+		transition: opacity 0.5s, transform 0.5s;
 		z-index: 10;
-
-
-		
 
 		&--active {
 			transform: translateX(0);
-
 		}
 	}
-
-
-
 
 	&-desktop {
 		display: none;
@@ -235,11 +218,9 @@ h1.company-name {
 // main
 //profile
 
-
 .cards {
 	background-color: $darker;
 	padding: 3.2rem;
-
 
 	.wrapper {
 		display: flex;
@@ -248,126 +229,50 @@ h1.company-name {
 	}
 }
 
-.profile {
-	width: 50%;
-	padding-top: 2.4rem;
-
-	h3 {
-		font-size: 2.4rem;
-		font-weight: 500;
-		color: $gold;
-		text-align: center;
-	}
-	&__pic {
-		padding-bottom: 1.6rem;
-		position: relative;
-		text-align: center;
-
-		img {
-			border-radius: 30%;
-			width: 150px;
-			filter: grayscale(0.6);
-			box-shadow: -4px 3px 19px -4px rgba(66, 68, 90, 1);
-		}
-	}
-
-	&__links {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 3.2rem;
-	}
-
-	&__github,
-	&__youtube,
-	&__linkedin {
-		width: 20%;
-		cursor: pointer;
-		transition: 0.3s;
-		border-radius: 30%;
-		transition: color 0.3s, background-color 0.3s;
-
-		img {
-			position: relative;
-			padding: 1rem;
-			right: -50%;
-			translate: -50%;
-			padding-bottom: 1.6rem;
-		}
-
-		p {
-			height: 50%;
-			font-size: 1.6rem;
-			position: relative;
-			top: -15%;
-			text-align: center;
-		}
-	}
-
-	&__youtube:hover {
-		background: rgba(201, 65, 65, 1);
-		color: white;
-	}
-
-	&__github:hover {
-		background: rgba(172, 83, 138, 1);
-		color: white;
-	}
-
-	&__linkedin:hover {
-		background-color: rgba(112, 112, 223, 1);
-		color: white;
-	}
-}
-
-.skills{
+.skills {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
-	p{
+	p {
 		padding-top: 0.4em;
 		color: $form;
 	}
 
-	&__main{
+	&__main {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 
-	h4{
+	h4 {
 		padding-bottom: 0.8em;
 		font-size: 5rem;
 		font-weight: 300;
 		color: $gold;
 		text-align: center;
 	}
-	h4::first-letter{
+	h4::first-letter {
 		text-decoration: underline;
-		
 	}
 
-
-
-	&__all{
+	&__all {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 2em;
 		margin: 0.5em;
-
 	}
 
-	&__dots{
+	&__dots {
 		display: flex;
 		padding-top: 1em;
 	}
 
-	.green, .blink , .gray{
+	.green,
+	.blink,
+	.gray {
 		width: 15px;
 		height: 15px;
 		border: 1px solid black;
@@ -375,55 +280,134 @@ h1.company-name {
 		border-radius: 50%;
 	}
 
-	.green{
-		background-color: rgb(102, 159, 170)
+	.green {
+		background-color: rgb(102, 159, 170);
 	}
 
-	.blink{
-
+	.blink {
 		animation: skills 3s infinite;
 	}
 
-	.gray{
+	.gray {
 		background-color: gray;
 	}
 
-
-	&__img{
+	&__img {
 		align-items: center;
 		width: 50px;
 		height: 50px;
 		filter: sepia(0.3);
 	}
-
-
 }
 
-.contactWave{
+.profile {
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 3em;
+	width: 100%;
+
+	h4 {
+		text-align: center;
+		font-size: 2.4rem;
+		font-weight: 500;
+		padding: 2em 0 0.5em 0;
+		color: $gold;
+	}
+
+	&__Left {
+		img {
+			width: 240px;
+			border-radius: 30%;
+			padding: 0.2em;
+			filter: grayscale(0.2);
+		}
+	}
+
+	&__Right {
+		position: relative;
+		display: flex;
+		width: 70%;
+		height: 100%;
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 0.5em;
+
+		p {
+			width: 100%;
+			padding-right: 1em;
+			font-size: 1.6em;
+			color: $gold;
+			padding: 1em;
+		}
+	}
+
+	&__Links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			padding-top: 0.4em;
+			font-size: 1.6rem;
+			color: $form;
+		}
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	&__github,
+	&__youtube,
+	&__linkedin {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 2em;
+		transition: all 0.4s;
+		cursor: pointer;
+
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	&__github:hover,
+	&__youtube:hover,
+	&__linkedin:hover {
+		filter: sepia(0.6);
+		border-radius: 50%;
+	}
+}
+
+.contactWave {
 	position: absolute;
 	top: -10px;
 	right: 0;
 	z-index: -2;
-	
 }
 
-.midWave{
+.midWave {
 	position: absolute;
 	top: -10px;
 	width: 100vw;
 	right: 0;
 }
 
-.monitorProject, .phoneProject{
+.monitorProject,
+.phoneProject {
 	position: absolute;
 	scale: 7;
 	top: 70%;
 	right: 40%;
-	animation: rotate-left 75s infinite ;
+	animation: rotate-left 75s infinite;
 	opacity: 0.05;
 }
 
-.phoneProject{
+.phoneProject {
 	top: 20%;
 	right: 80%;
 	animation: rotate-right 35s infinite;
@@ -443,7 +427,6 @@ h1.company-name {
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	
 
 	&__description {
 		padding: 1rem;
@@ -498,10 +481,6 @@ h1.company-name {
 		}
 	}
 }
-
-
-
-
 
 //contact
 
@@ -581,7 +560,42 @@ h1.company-name {
 	}
 }
 
-
-
+  
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #5A7885 #BBC3C4;
+  }
+  
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+	width: 19px;
+	width: 19px;
+  }
+  *::-webkit-scrollbar-track {
+	border-radius: 0px;
+	background-color: #BBC3C4;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+	background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+	background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+	border-radius: 0px;
+	background-color: #5A7885;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+	background-color: #5A7885;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+	background-color: #5A7885;
+  }
 @import './medium';
 @import './large';

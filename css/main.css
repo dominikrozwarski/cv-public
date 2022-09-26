@@ -295,10 +295,11 @@ h1.company-name {
   z-index: 500;
 }
 
-.auto-type, .inline {
-  background: #5A7885;
-  background: -webkit-gradient(linear, left top, right top, from(#5A7885), to(#9b7379));
-  background: linear-gradient(to right, #5A7885 0%, #9b7379 100%);
+.auto-type,
+.inline {
+  background: #5a7885;
+  background: -webkit-gradient(linear, left top, right top, from(#5a7885), to(#9b7379));
+  background: linear-gradient(to right, #5a7885 0%, #9b7379 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -325,10 +326,10 @@ h1.company-name {
   background-color: #1f201e;
   -webkit-transform: translateX(-102%);
           transform: translateX(-102%);
-  -webkit-transition: opacity 0.5s ,-webkit-transform 0.5s;
-  transition: opacity 0.5s ,-webkit-transform 0.5s;
-  transition: opacity 0.5s ,transform 0.5s;
-  transition: opacity 0.5s ,transform 0.5s ,-webkit-transform 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
   z-index: 10;
 }
 
@@ -373,90 +374,6 @@ h1.company-name {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.profile {
-  width: 50%;
-  padding-top: 2.4rem;
-}
-
-.profile h3 {
-  font-size: 2.4rem;
-  font-weight: 500;
-  color: #5a7885;
-  text-align: center;
-}
-
-.profile__pic {
-  padding-bottom: 1.6rem;
-  position: relative;
-  text-align: center;
-}
-
-.profile__pic img {
-  border-radius: 30%;
-  width: 150px;
-  -webkit-filter: grayscale(0.6);
-          filter: grayscale(0.6);
-  -webkit-box-shadow: -4px 3px 19px -4px #42445a;
-          box-shadow: -4px 3px 19px -4px #42445a;
-}
-
-.profile__links {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 3.2rem;
-}
-
-.profile__github, .profile__youtube, .profile__linkedin {
-  width: 20%;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 30%;
-  -webkit-transition: color 0.3s, background-color 0.3s;
-  transition: color 0.3s, background-color 0.3s;
-}
-
-.profile__github img, .profile__youtube img, .profile__linkedin img {
-  position: relative;
-  padding: 1rem;
-  right: -50%;
-  translate: -50%;
-  padding-bottom: 1.6rem;
-}
-
-.profile__github p, .profile__youtube p, .profile__linkedin p {
-  height: 50%;
-  font-size: 1.6rem;
-  position: relative;
-  top: -15%;
-  text-align: center;
-}
-
-.profile__youtube:hover {
-  background: #c94141;
-  color: white;
-}
-
-.profile__github:hover {
-  background: #ac538a;
-  color: white;
-}
-
-.profile__linkedin:hover {
-  background-color: #7070df;
-  color: white;
 }
 
 .skills {
@@ -525,7 +442,9 @@ h1.company-name {
   padding-top: 1em;
 }
 
-.skills .green, .skills .blink, .skills .gray {
+.skills .green,
+.skills .blink,
+.skills .gray {
   width: 15px;
   height: 15px;
   border: 1px solid black;
@@ -556,6 +475,110 @@ h1.company-name {
           filter: sepia(0.3);
 }
 
+.profile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 3em;
+  width: 100%;
+}
+
+.profile h4 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 2em 0 0.5em 0;
+  color: #5a7885;
+}
+
+.profile__Left img {
+  width: 240px;
+  border-radius: 30%;
+  padding: 0.2em;
+  -webkit-filter: grayscale(0.2);
+          filter: grayscale(0.2);
+}
+
+.profile__Right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.5em;
+}
+
+.profile__Right p {
+  width: 100%;
+  padding-right: 1em;
+  font-size: 1.6em;
+  color: #5a7885;
+  padding: 1em;
+}
+
+.profile__Links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__Links p {
+  padding-top: 0.4em;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile__github, .profile__youtube, .profile__linkedin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.profile__github img, .profile__youtube img, .profile__linkedin img {
+  width: 50px;
+  height: 50px;
+}
+
+.profile__github:hover, .profile__youtube:hover, .profile__linkedin:hover {
+  -webkit-filter: sepia(0.6);
+          filter: sepia(0.6);
+  border-radius: 50%;
+}
+
 .contactWave {
   position: absolute;
   top: -10px;
@@ -570,7 +593,8 @@ h1.company-name {
   right: 0;
 }
 
-.monitorProject, .phoneProject {
+.monitorProject,
+.phoneProject {
   position: absolute;
   scale: 7;
   top: 70%;
@@ -756,6 +780,44 @@ h1.company-name {
   background-color: #5a7885;
 }
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5A7885 #BBC3C4;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 19px;
+  width: 19px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: #BBC3C4;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #5A7885;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #5A7885;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #5A7885;
+}
+
 @media (min-width: 768px) {
   .contact__form {
     gap: 30px;
@@ -787,40 +849,25 @@ h1.company-name {
     -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
-  __github img, __youtube img {
-    scale: 1;
-  }
 }
 
 @media (max-width: 768px) {
-  .profile p {
-    font-size: 1rem;
-  }
   .skills img {
     width: 30px;
     height: 30px;
   }
-  .skills .green, .skills .blink, .skills .gray {
+  .skills .green,
+  .skills .blink,
+  .skills .gray {
     width: 15px;
     height: 15px;
   }
 }
 
 @media (max-width: 600px) {
-  .profile__links {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .profile__github, .profile__youtube, .profile__linkedin {
-    width: 40%;
-    margin: 1rem;
-  }
-  .skills .green, .skills .blink, .skills .gray {
+  .skills .green,
+  .skills .blink,
+  .skills .gray {
     width: 10px;
     height: 10px;
   }
@@ -830,6 +877,21 @@ h1.company-name {
   }
   .project img {
     height: 200px;
+  }
+  .profile p {
+    font-size: 1rem;
+  }
+  .profile__github img, .profile__youtube img, .profile__linkedin img {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    width: 20px;
+    height: 20px;
+    margin: 0.2em;
+  }
+  .profile__github p, .profile__youtube p, .profile__linkedin p {
+    text-align: center;
+    font-size: 1rem;
   }
 }
 
@@ -940,6 +1002,38 @@ h1.company-name {
   }
   .hamburger {
     display: none;
+  }
+}
+
+@media (max-width: 978px) {
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile img {
+    width: 150px;
+  }
+  .profile__Right p {
+    font-size: 1.6rem;
+  }
+  .profile__github, .profile__youtube, .profile__linkedin {
+    padding: 1em;
+  }
+  .profile__github img, .profile__youtube img, .profile__linkedin img {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    width: 30px;
+    height: 30px;
+  }
+  .profile__github p, .profile__youtube p, .profile__linkedin p {
+    text-align: center;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

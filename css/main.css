@@ -1,4 +1,4 @@
-@-webkit-keyframes pulse {
+﻿@-webkit-keyframes pulse {
   from {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -181,7 +181,7 @@ h1.company-name {
   position: absolute;
   bottom: -0.1em;
   left: 0;
-  width: 40px;
+  width: 60px;
   height: 2px;
   background-color: #5a7885;
   content: '';
@@ -617,7 +617,7 @@ h1.company-name {
 .monitorProject,
 .phoneProject {
   position: absolute;
-  scale: 7;
+  transform: scale(7);
   top: 70%;
   right: 40%;
   -webkit-animation: rotate-left 75s infinite;
@@ -671,8 +671,9 @@ h1.company-name {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 1px solid #fff;
-  border-radius: 15%;
+  border-radius: 16px;
   background-color: #b6bdbc;
+  transition: transform 0.3s, box-shadow 0.3s;
   -webkit-box-shadow: -4px 3px 19px -4px #42445a;
           box-shadow: -4px 3px 19px -4px #42445a;
 }
@@ -685,28 +686,28 @@ h1.company-name {
 }
 
 .project__one img, .project__two img, .project__three img {
-  height: 300px;
-  width: auto;
-  -webkit-filter: sepia(0.1);
-          filter: sepia(0.1);
-  border-radius: 10%;
-  -webkit-box-shadow: -4px 3px 19px -4px #42445a;
-          box-shadow: -4px 3px 19px -4px #42445a;
+  height: 220px;
+  width: 280px;
+  object-fit: cover;
+  filter: sepia(0.05);
+  border-radius: 10px;
+  box-shadow: -4px 3px 19px -4px #42445a;
 }
 
 .project__one button, .project__two button, .project__three button {
   margin-top: 2rem;
-  width: 80px;
-  height: 40px;
-  border-radius: 5%;
-  border: 1px solid #fff;
-  background-color: #b6bdbc;
+  align-self: center;
+  padding: 0.8rem 2.4rem;
+  border-radius: 50px;
+  border: 2px solid #5a7885;
+  background-color: transparent;
   cursor: pointer;
   color: #5a7885;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
-  -webkit-box-shadow: -4px 3px 19px -4px #42445a;
-          box-shadow: -4px 3px 19px -4px #42445a;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background-color 0.25s, color 0.25s;
 }
 
 .project__one button:hover, .project__two button:hover, .project__three button:hover {
@@ -717,7 +718,6 @@ h1.company-name {
 .contact {
   position: relative;
   padding: 6em 2em;
-  z-index: -5;
   background-color: #b6bdbc;
   z-index: 2;
 }
@@ -810,7 +810,7 @@ h1.company-name {
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
   width: 19px;
-  width: 19px;
+  
 }
 
 *::-webkit-scrollbar-track {
